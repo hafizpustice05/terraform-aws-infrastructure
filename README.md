@@ -10,10 +10,16 @@ To run this project you simply need to have terraform and AWS cli
 As we are using terraform commands
 
 ## Setup secret_key and access_key in your system
-
- export AWS_ACCESS_KEY_ID = value
- export AWS_SECRET_ACCESS_KEY = value
+Following this command
  
+ export AWS_ACCESS_KEY_ID = value
+
+ export AWS_SECRET_ACCESS_KEY = value
+
+You also configure by AWS cli, you have to be install aws cli, then following this command
+
+    aws configure
+
 ### Command: init
 The terraform init command initializes a working directory containing Terraform configuration files. This is the first command that should be run after writing a new Terraform configuration or cloning an existing one from version control. It is safe to run this command multiple times.
 

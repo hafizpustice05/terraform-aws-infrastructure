@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"
-  # access_key = "" //set global variable in system
-  # secret_key = "" //set global variable in system
+  # access_key = "" //set global variable in system 
+  # secret_key = "" //set global variable in system 
 }
 
 # variable "vpc_cidr_block" {
