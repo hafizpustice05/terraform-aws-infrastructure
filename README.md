@@ -12,9 +12,9 @@ As we are using terraform commands
 ## Setup secret_key and access_key in your system
 Following this command
  
- export AWS_ACCESS_KEY_ID = value
+``` export AWS_ACCESS_KEY_ID = value```
 
- export AWS_SECRET_ACCESS_KEY = value
+ ```export AWS_SECRET_ACCESS_KEY = value```
 
 You also configure by AWS cli, you have to be install aws cli, then following this command
 
@@ -63,3 +63,9 @@ The terraform destroy command is a convenient way to destroy all remote objects 
 The terraform  command executes the actions proposed in a Terraform plan.
 
     export TF_VAR_variablename = 'variable value'
+
+
+### Connect ec2 by linux command
+The terraform  command executes the actions proposed in a Terraform plan.
+
+    ssh ec2-user@public_ip
