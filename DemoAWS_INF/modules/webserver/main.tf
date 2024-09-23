@@ -1,6 +1,6 @@
 
-resource "aws_security_group" "myapp-sg" {
-  name   = "myapp-sg"
+resource "aws_security_group" "cloud_lab-sg" {
+  name   = "cloud_lab-sg"
   vpc_id = var.vpc_id
 
   # incomming rules
@@ -53,7 +53,7 @@ resource "aws_key_pair" "ssh-key" {
   public_key = file(var.public_key_location)
 
 }
-resource "aws_instance" "myapp-server" {
+resource "aws_instance" "ec2_server" {
   # ami = "ami-02c21308fed24a8ab"
   ami           = data.aws_ami.latest-amazon-linux-image.id
   instance_type = var.instance_type
@@ -64,7 +64,7 @@ resource "aws_instance" "myapp-server" {
     module.myapp-subnet.subnet.id
   */
   subnet_id              = var.subnet_id
-  vpc_security_group_ids = [aws_security_group.myapp-sg.id]
+  vpc_security_group_ids = [aws_security_group.cloud_lab-sg.id]
   availability_zone      = var.avail_zone
 
   associate_public_ip_address = true
